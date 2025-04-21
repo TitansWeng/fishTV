@@ -161,7 +161,6 @@ const App: React.FC = () => {
               <Route path="/search" element={<SearchResultsPage />} />
               <Route path="/history" element={<HistoryPage />} />
             </Routes>
-            <ThemeToggle />
           </Router>
         </SearchHistoryProvider>
       </HistoryProvider>
