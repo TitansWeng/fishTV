@@ -1,28 +1,28 @@
 export const API_CONFIG = {
-  baseURL: '/subocaiji/api.php',
+  baseURL: '/subo/api.php',
   timeout: 10000,
 };
 
 export const VIDEO_SOURCES = {
   moyu: {
-    name: '摸鱼云️',
-    url: '/heimuer/api.php'
+    name: '索尼雲',
+    url: '/suoni/api.php'
   },
   feifan: {
-    name: '非凡云',
-    url: '/ikun/api.php'
+    name: '非凡雲',
+    url: '/ffzy5/api.php'
   },
   modu: {
-    name: '魔都云',
+    name: '魔都雲',
     url: '/modu/api.php'
   },
   youzhi: {
-    name: '优质云',
+    name: '優質雲',
     url: '/youzhi/inc/apijson.php'
   },
   subocaiji: {
-    name: '速播云',
-    url: '/subocaiji/api.php'
+    name: '速播雲',
+    url: '/suboc/api.php'
   },
 
 };
