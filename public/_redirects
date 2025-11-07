@@ -1,1 +1,7 @@
-/*    /index.html   200
+# 代理規則 (對應 Nginx proxy_pass)
+/heimuer/* https://heimuer.tv/:splat   200
+/ikun/* https://api.ffzyapi.com/:splat 200
+/subocaiji/* http://subocaiji.com/:splat  200
+
+# 單頁應用程式(SPA)規則 (必須放在最後)
+/* /index.html                 200

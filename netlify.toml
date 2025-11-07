@@ -5,28 +5,5 @@
   command = "bun run build"
   publish = "dist"
 
-# === 這是新增的代理規則 ===
-# 对应 nginx 的 "location ^~ /heimuer"
-[[redirects]]
-  from = "/heimuer/*"
-  to = "https://heimuer.tv/:splat"
-  status = 200 # 200 表示這是一個代理 (proxy)
-
-# 对应 nginx 的 "location ^~ /ikun"
-[[redirects]]
-  from = "/ikun/*"
-  to = "https://api.ffzyapi.com/:splat"
-  status = 200
-
-# 对应 nginx 的 "location ^~ /subocaiji"
-[[redirects]]
-  from = "/subocaiji/*"
-  to = "http://subocaiji.com/:splat"
-  status = 200
-
-# === 這是您原本的 SPA 規則 ===
-# 注意：SPA 規則必須放在所有代理規則之後
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# 所有的 [[redirects]] 規則都已經被您刪除
+# 並且轉移到 public/_redirects 檔案中
