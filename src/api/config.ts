@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  baseURL: '/subo/api.php',
+  baseURL: '/youzhi/api.php',
   timeout: 10000,
 };
 
