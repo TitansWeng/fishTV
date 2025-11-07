@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  baseURL: '/heimuer/api.php',
+  baseURL: '/subocaiji/api.php',
   timeout: 10000,
 };
 
