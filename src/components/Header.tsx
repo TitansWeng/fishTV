@@ -80,7 +80,7 @@ const Header = () => {
             <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <input
                 type="text"
-                placeholder="搜索电影、电视剧、动漫..."
+                placeholder="搜索電影、電視劇、動漫..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-2 pl-10 pr-4 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"

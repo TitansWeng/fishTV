@@ -1,9 +1,9 @@
 import type { ContentItem } from '../components/ContentSection';
 
 export const bannerData = {
-  title: "摸鱼TV 欢迎你～",
+  title: "泰坦ＴＶ 歡迎您！",
   imageUrl: "https://img1.baidu.com/it/u=2033808109,2698966182&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800",
-  description: "大家好，我是摸鱼TV，欢迎来到我的世界！"
+  description: "板橋車銀優、板橋金泰亨、板橋朴敘俊、板橋朴寶劍、板橋李敏鎬、板橋宋仲基、板橋玄彬、板橋蘇志燮、板橋張東健、板橋池昌旭、板橋李準基、板橋劉亞仁、板橋曹政奭、板橋鄭容和、板橋金宇彬、板橋姜河那、板橋吳世勳、板橋朴炯植、板橋車太鉉、板橋安宰賢、板橋金材昱、板橋丁海寅、板橋申河均、板橋徐康俊～盡在泰坦ＴＶ！",
 };
 
 export const trendingContent: ContentItem[] = [

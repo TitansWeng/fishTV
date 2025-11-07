@@ -5,10 +5,10 @@ const Logo = () => {
     <div className="flex items-center">
       <img
         src="/img.png"
-        alt="摸鱼 TV"
+        alt="泰坦ＴＶ"
         className="w-8 h-8 mr-2"
       />
-      <span className="text-xl font-bold freeok-logo">摸鱼 TV</span>
+      <span className="text-xl font-bold freeok-logo">泰坦ＴＶ</span>
     </div>
   );
 };

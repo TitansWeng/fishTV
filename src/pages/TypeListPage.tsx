@@ -6,82 +6,82 @@ import SkeletonCard from '../components/SkeletonCard';
 import { getVideoList } from '../api/video';
 import { Video } from '../api/types';
 
-// 定义类型映射
+// 定義類型映射
 const TYPE_MAP: { [key: string]: { id: number; title: string } } = {
-  movies: { id: 6, title: '电影' },
-  tv: { id: 13, title: '电视剧' },
-  anime: { id: 60, title: '动漫' },
-  variety: { id: 38, title: '综艺' },
-  short: { id: 27, title: '短剧' }
+  movies: { id: 6, title: '電影' },
+  tv: { id: 13, title: '電視劇' },
+  anime: { id: 60, title: '動漫' },
+  variety: { id: 38, title: '綜藝' },
+  short: { id: 27, title: '短劇' }
 };
 
-// 定义电影子分类映射
+// 定義電影子分類映射
 const MOVIE_SUB_TYPES = [
-  { id: 6, name: '剧情片' },
-  { id: 7, name: '动作片' },
-  { id: 8, name: '冒险片' },
-  { id: 26, name: '动画电影' },
-  { id: 10, name: '喜剧片' },
+  { id: 6, name: '劇情片' },
+  { id: 7, name: '動作片' },
+  { id: 8, name: '冒險片' },
+  { id: 26, name: '動畫電影' },
+  { id: 10, name: '喜劇片' },
   { id: 11, name: '奇幻片' },
   { id: 12, name: '恐怖片' },
-  { id: 20, name: '悬疑片' },
-  { id: 21, name: '惊悚片' },
-  { id: 22, name: '灾难片' },
-  { id: 23, name: '爱情片' },
+  { id: 20, name: '懸疑片' },
+  { id: 21, name: '驚悚片' },
+  { id: 22, name: '災難片' },
+  { id: 23, name: '愛情片' },
   { id: 24, name: '犯罪片' },
   { id: 25, name: '科幻片' },
 
 ];
 
-// 定义电视剧子分类映射
+// 定義電視劇子分類映射
 const TV_SUB_TYPES = [
-  { id: 13, name: '国产剧' },
-  { id: 14, name: '港剧' },
-  { id: 15, name: '韩剧' },
-  { id: 16, name: '日剧' },
-  { id: 28, name: '泰剧' },
-  { id: 29, name: '台剧' },
-  { id: 30, name: '欧美剧' },
-  { id: 31, name: '新马剧' },
-  { id: 32, name: '其他剧' }
+  { id: 13, name: '國產劇' },
+  { id: 14, name: '港劇' },
+  { id: 15, name: '韓劇' },
+  { id: 16, name: '日劇' },
+  { id: 28, name: '泰劇' },
+  { id: 29, name: '台劇' },
+  { id: 30, name: '歐美劇' },
+  { id: 31, name: '新馬劇' },
+  { id: 32, name: '其他劇' }
 ];
 
-// 定义动漫子分类映射
+// 定義動漫子分類映射
 const ANIME_SUB_TYPES = [
-  { id: 60, name: '国产动漫' },
-  { id: 57, name: '欧美动漫' },
-  { id: 58, name: '日本动漫' },
-  { id: 59, name: '韩国动漫' },
-  { id: 61, name: '港台动漫' },
-  { id: 62, name: '新马泰动漫' },
-  { id: 63, name: '其它动漫' }
+  { id: 60, name: '國產動漫' },
+  { id: 57, name: '歐美動漫' },
+  { id: 58, name: '日本動漫' },
+  { id: 59, name: '韓國動漫' },
+  { id: 61, name: '港台動漫' },
+  { id: 62, name: '新馬泰動漫' },
+  { id: 63, name: '其它動漫' }
 ];
 
-// 定义综艺子分类映射
+// 定義綜藝子分類映射
 const VARIETY_SUB_TYPES = [
-  { id: 38, name: '国产综艺' },
-  { id: 39, name: '港台综艺' },
-  { id: 40, name: '韩国综艺' },
-  { id: 41, name: '日本综艺' },
-  { id: 42, name: '欧美综艺' },
-  { id: 43, name: '新马泰综艺' },
-  { id: 44, name: '其他综艺' }
+  { id: 38, name: '國產綜藝' },
+  { id: 39, name: '港台綜藝' },
+  { id: 40, name: '韓國綜藝' },
+  { id: 41, name: '日本綜藝' },
+  { id: 42, name: '歐美綜藝' },
+  { id: 43, name: '新馬泰綜藝' },
+  { id: 44, name: '其他綜藝' }
 ];
 
-// 定义短剧子分类映射
+// 定義短劇子分類映射
 const SHORT_SUB_TYPES = [
-  { id: 47, name: '逆袭短剧' },
-  { id: 45, name: '古装短剧' },
-  { id: 46, name: '虐恋短剧' },
-  { id: 48, name: '悬疑短剧' },
-  { id: 49, name: '神豪短剧' },
-  { id: 50, name: '重生短剧' },
-  { id: 51, name: '复仇短剧' },
-  { id: 52, name: '穿越短剧' },
-  { id: 53, name: '甜宠短剧' },
-  { id: 54, name: '强者短剧' },
-  { id: 55, name: '萌宝短剧' },
-  { id: 56, name: '其它短剧' },
+  { id: 47, name: '逆襲短劇' },
+  { id: 45, name: '古裝短劇' },
+  { id: 46, name: '虐戀短劇' },
+  { id: 48, name: '懸疑短劇' },
+  { id: 49, name: '神豪短劇' },
+  { id: 50, name: '重生短劇' },
+  { id: 51, name: '覆仇短劇' },
+  { id: 52, name: '穿越短劇' },
+  { id: 53, name: '甜寵短劇' },
+  { id: 54, name: '強者短劇' },
+  { id: 55, name: '萌寶短劇' },
+  { id: 56, name: '其它短劇' },
 ];
 
 interface TypeListPageProps {

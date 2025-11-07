@@ -16,12 +16,12 @@ const Sidebar = () => {
   
   // Menu items based on the website
   const menuItems = [
-    { id: 1, name: '首页', icon: HiHome, link: '/' },
-    { id: 2, name: '电影', icon: HiFilm, link: '/movies' },
-    { id: 5, name: '综艺', icon: HiStar, link: '/variety' },
-    { id: 3, name: '电视剧', icon: HiDesktopComputer, link: '/tv' },
-    { id: 4, name: '动漫', icon: HiSparkles, link: '/anime' },
-    { id: 6, name: '短剧', icon: HiVideoCamera, link: '/short' },
+    { id: 1, name: '首頁', icon: HiHome, link: '/' },
+    { id: 2, name: '電影', icon: HiFilm, link: '/movies' },
+    { id: 5, name: '綜藝', icon: HiStar, link: '/variety' },
+    { id: 3, name: '電視劇', icon: HiDesktopComputer, link: '/tv' },
+    { id: 4, name: '動漫', icon: HiSparkles, link: '/anime' },
+    { id: 6, name: '短片', icon: HiVideoCamera, link: '/short' },
   ];
 
   return (
